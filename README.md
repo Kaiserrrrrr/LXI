@@ -1,4 +1,4 @@
-# ***🕊️ LXI (LXQT Install)*** 
+# ***🪽 LXI*** 
 ## 📜 System Requirements
 | Component | Minimum | Recommended |
 | :--- | :--- | :--- |
