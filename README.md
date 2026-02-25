@@ -1,4 +1,5 @@
 # ***🪽 LXI*** 
+LXQt Install For Arch, Made Simple
 ## 📜 System Requirements
 | Component | Minimum | Recommended |
 | :--- | :--- | :--- |
