@@ -14,7 +14,7 @@ sudo sed -i 's/#RuntimeMaxUse=/RuntimeMaxUse=5M/' /etc/systemd/journald.conf
 sudo systemctl restart systemd-journald
 sudo find /var/log -type f -exec truncate -s 0 {} +
 
-{ sudo find /usr/lib/modules -name "*.ko" -print0 | xargs -0 -P $(nproc) strip --strip-debug || true; }
+sudo find /usr/lib/modules -name "*.ko" -print0 | xargs -0 -r -P $(nproc) strip --strip-debug
 
 orphans=$(pacman -Qtdq)
 if [[ -n "$orphans" ]]; then
@@ -22,4 +22,5 @@ if [[ -n "$orphans" ]]; then
 fi
 
 sudo pacman -Scc --noconfirm 
-rm -rf ~/.cache/thumbnails/* ~/.cache/fontconfig/* ~/.local/share/Trash/* echo -e "\e[32m[✓] Cleanup Complete\e[0m"
+rm -rf ~/.cache/thumbnails/* ~/.cache/fontconfig/* ~/.local/share/Trash/* 
+echo -e "\e[32m[✓] Cleanup Complete\e[0m"
