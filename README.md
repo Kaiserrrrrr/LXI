@@ -1,4 +1,4 @@
-# LXI - LXQtInstall
+# LXI 
 ## 📜 System Requirements
 | Component | Minimum | Recommended |
 | :--- | :--- | :--- |
