@@ -12,7 +12,7 @@ DRIVERS="sof-firmware alsa-firmware tlp thermald mesa udisks2 zram-generator"
 { [[ "$IS_LAPTOP" == "1" ]] && DRIVERS+=" xf86-input-libinput" || true; }
 { grep -q "^\[multilib\]" /etc/pacman.conf && DRIVERS+=" lib32-mesa" || true; }
 
-sudo pacman -S --noconfirm --needed $DRIVERS openbox lxqt-session lxqt-panel lxqt-config lxqt-qtplugin lxqt-powermanagement lxqt-notificationd lxqt-policykit lxqt-globalkeys lxqt-runner lxqt-themes lximage-qt pcmanfm-qt qterminal breeze-icons gvfs light-locker xorg-server lightdm lightdm-gtk-greeter pipewire-audio pavucontrol-qt alsa-utils bluez bluez-utils blueman networkmanager network-manager-applet xdg-utils picom >/dev/null 2>&1
+sudo pacman -S --noconfirm --needed $DRIVERS lxqt-session lxqt-panel lxqt-runner 1xqt-qtplugin lxqt-globalkeys lxqt-notificationd lxqt-config lxqt-policykit 1xqt-powermanagement 1xqt-themes pcmanfm-qt qterminal lximage-qt screengrab qps openbox xdg-desktop-portal-lxqt breeze-icons gvfs light-locker xorg-server lightdm lightdm-gtk-greeter pipewire-audio alsa-utils bluez bluez-utils blueman networkmanager network-manager-applet xdg-utils picom >/dev/null 2>&1
 
 { [[ ! -f /etc/systemd/zram-generator.conf ]] && echo -e "[zram0]\nzram-size = ram * 0.6\ncompression-algorithm = zstd\nswap-priority = 100\nfs-type = swap" | sudo tee /etc/systemd/zram-generator.conf >/dev/null || true; }
 sudo systemctl daemon-reload >/dev/null 2>&1 && sudo usermod -aG video,audio,lp,scanner $USER >/dev/null 2>&1
