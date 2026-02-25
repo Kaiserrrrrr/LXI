@@ -1,4 +1,4 @@
-# LXI 
+# 🪶 LXI 
 ## 📜 System Requirements
 | Component | Minimum | Recommended |
 | :--- | :--- | :--- |
