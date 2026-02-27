@@ -23,7 +23,7 @@ if [[ -n "$hw_data" ]]; then
         fi
         
         if ! echo "$hw_data" | grep -wiq "$vendor"; then
-            sudo pacman -Rns --noconfirm "$pkg" >/dev/null 2>&1
+            sudo pacman -Rdd --noconfirm "$pkg" >/dev/null 2>&1
         fi
     done
 fi
