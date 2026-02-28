@@ -4,12 +4,12 @@ sudo pacman -Syu --noconfirm --needed >/dev/null 2>&1
 
 CPU_VENDOR=$(grep -m1 'vendor_id' /proc/cpuinfo)
 IS_LAPTOP=$([[ -d /sys/class/power_supply/BAT0 || -d /sys/class/input/mouse0 ]] && echo 1 || echo 0)
-DRIVERS="sof-firmware alsa-firmware tlp thermald mesa udisks2 zram-generator"
+DRIVERS="sof-firmware alsa-firmware mesa udisks2 zram-generator"
 
-{ [[ "$CPU_VENDOR" =~ "GenuineIntel" ]] && DRIVERS+=" intel-ucode vulkan-intel intel-media-driver" || DRIVERS+=" amd-ucode"; }
+{ [[ "$CPU_VENDOR" =~ "GenuineIntel" ]] && DRIVERS+=" intel-ucode vulkan-intel intel-media-driver thermald" || DRIVERS+=" amd-ucode"; }
 { lspci -n | grep -q "14e4:" && DRIVERS+=" broadcom-wl" || true; }
 { lspci -n | grep -q "10de:" && DRIVERS+=" nvidia nvidia-utils nvidia-settings" || true; }
-{ [[ "$IS_LAPTOP" == "1" ]] && DRIVERS+=" xf86-input-libinput" || true; }
+{ [[ "$IS_LAPTOP" == "1" ]] && DRIVERS+=" xf86-input-libinput tlp" || true; }
 { grep -q "^\[multilib\]" /etc/pacman.conf && DRIVERS+=" lib32-mesa" || true; }
 
 sudo pacman -S --noconfirm --needed $DRIVERS lxqt-session lxqt-panel lxqt-runner lxqt-qtplugin lxqt-globalkeys lxqt-notificationd lxqt-config lxqt-policykit lxqt-powermanagement lxqt-themes pcmanfm-qt qterminal lximage-qt screengrab qps openbox xdg-desktop-portal-lxqt breeze-icons gvfs xdg-utils xorg-server lightdm lightdm-gtk-greeter light-locker pipewire-audio pipewire-pulse alsa-utils bluez bluez-utils blueman networkmanager network-manager-applet >/dev/null 2>&1
