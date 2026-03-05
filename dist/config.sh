@@ -15,4 +15,4 @@ UID0=$(id -u "$USER0")
 { sudo -u "$USER0" XDG_RUNTIME_DIR="/run/user/$UID0" systemctl --user enable --now pipewire pipewire-pulse wireplumber; } 
 } >/dev/null 2>&1
 
-echo -e "\e[32m[✓] Configuration Complete\e[0m"
+echo -e "[✓] Configuration Complete."
