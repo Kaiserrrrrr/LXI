@@ -17,4 +17,4 @@ sudo pacman -Syu --noconfirm --needed
 sudo pacman -S --noconfirm --needed $DRIVERS $LXQT $UTIL
 } >/dev/null 2>&1
 
-echo -e "\e[32m[✓] Installation Complete\e[0m"
+echo -e "[✓] Installation Complete"
