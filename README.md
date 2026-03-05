@@ -11,7 +11,7 @@ LXQt on Arch made effortless.
 ---
 
 ## 🚀 Installation
-Run this command after using archinstall as a user with `sudo` privileges. 
+Run this command post-archinstall as a user with `sudo` privileges. 
 
 ```bash
 curl -fsSL https://is.gd/aqtive | sh
