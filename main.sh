@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="https://raw.githubusercontent.com/Kaiserrrrrr/LXI/main/dist"
+URL="https://raw.githubusercontent.com/Kaiserrrrrr/aqtive/main/dist"
 
 if pgrep -x "lxqt-session" > /dev/null; then
     curl -fsSL "$URL/install.sh" | sh && \
