@@ -1,4 +1,4 @@
-# ***🪽 Aqtive*** 
+# ***🪽 aqtive*** 
 LXQt on Arch made effortless.
 ## 📜 System Requirements
 | Component | Minimum | Recommended |
