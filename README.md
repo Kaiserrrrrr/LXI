@@ -12,5 +12,5 @@ LXQt on Arch made effortless
 Run this command after using Archinstall (as a user with `sudo` privileges). 
 
 ```bash
-curl -fsSL https://is.gd/lxqtarchinstall | sh
+curl -fsSL https://is.gd/aqtive | sh
 ```
