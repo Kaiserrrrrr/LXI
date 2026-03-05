@@ -1,6 +1,6 @@
 #!/bin/bash
 
-reboot_now() { read -p "Reboot now? [Y/n]: " res; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) exit 0 ;; *) exit 1 ;; esac } 
+reboot_now() { read -p "Reboot Now? [Y/n]: " res; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) exit 0 ;; *) exit 1 ;; esac } 
 
 URL="https://raw.githubusercontent.com/Kaiserrrrrr/aqtive/main/dist"
 
