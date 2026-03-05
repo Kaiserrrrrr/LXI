@@ -12,5 +12,5 @@ LXQt install for Arch Linux made effortless
 Run this command after using Archinstall (as a user with `sudo` privileges). 
 
 ```bash
-curl -fsSL https://cdn.jsdelivr.net/gh/Kaiserrrrrr/LXI/main.sh | sh
+curl -fsSL https://is.gd/lxqtarchinstall | sh
 ```
