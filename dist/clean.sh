@@ -15,4 +15,4 @@ pacman -Qqs linux-firmware- | grep -vE 'whence|other' | while read -r pkg; do
 done
 
 pacman -Qtdq | xargs -r sudo pacman -Rns --noconfirm && sudo pacman -Scc --noconfirm 
-} >/dev/null 2>&1 && tput cuu 1 && tput el && echo "Cleanup Complete"
+} >/dev/null 2>&1 && echo "Cleanup Complete"
