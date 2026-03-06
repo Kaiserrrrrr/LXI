@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -n "Configuring Machine..."
+
 {
 CPU_VENDOR=$(grep -m1 'vendor_id' /proc/cpuinfo)
 IS_LAPTOP=$(cat /sys/class/dmi/id/chassis_type | grep -qE '8|9|10|11|12|14|30|31|32' && echo 1 || echo 0)
@@ -15,4 +17,4 @@ UID0=$(id -u "$USER0")
 { sudo -u "$USER0" XDG_RUNTIME_DIR="/run/user/$UID0" systemctl --user enable --now pipewire pipewire-pulse wireplumber; } 
 } >/dev/null 2>&1
 
-echo -e "[✓] Configuration Complete"
+echo -ne "\rConfiguration Complete\033[K"
