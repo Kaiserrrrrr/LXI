@@ -16,8 +16,7 @@ pacman -Qqs linux-firmware- | grep -vE 'whence|other' | while read -r pkg; do
     echo "$hw_data" | grep -wiq "$vendor" || sudo pacman -Rdd --noconfirm "$pkg"
 done
 
-pacman -Qtdq | xargs -r sudo pacman -Rns --noconfirm
-sudo pacman -Scc --noconfirm 
+pacman -Qtdq | xargs -r sudo pacman -Rns --noconfirm && sudo pacman -Scc --noconfirm 
 } >/dev/null 2>&1
 
 echo -e "\rCleanup Complete\033[K"
