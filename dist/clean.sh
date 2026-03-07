@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Clearing Redundant Files..." && {
+{
 sudo journalctl --vacuum-size=5M 
 sudo sed -i 's/#SystemMaxUse=/SystemMaxUse=5M/' /etc/systemd/journald.conf
 sudo sed -i 's/#RuntimeMaxUse=/RuntimeMaxUse=5M/' /etc/systemd/journald.conf
