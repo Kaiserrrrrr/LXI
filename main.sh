@@ -20,10 +20,10 @@ echo '
 if pgrep -x "lxqt-session" > /dev/null; then
     curl -fsSL "$URL/install.sh" | sh && \
     curl -fsSL "$URL/clean.sh" | sh && \
-    sync && echo -n "Aqtive Update Complete. " && reboot_now
+    sync && echo -n "Update Complete. " && reboot_now
 else
     curl -fsSL "$URL/install.sh" | sh && \
     curl -fsSL "$URL/config.sh" | sh && \
     curl -fsSL "$URL/clean.sh" | sh && \
-    sync && echo -n "Aqtive Installation Complete. " && reboot_now
+    sync && echo -n "Installation Complete. " && reboot_now
 fi
