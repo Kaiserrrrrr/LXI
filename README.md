@@ -71,7 +71,9 @@ sequenceDiagram
     end
     deactivate M
     Note over U, Sys: Process Finished
-    ```
+```
+
+---
 
 ## 📜 License
 
