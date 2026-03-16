@@ -3,7 +3,7 @@
 echo -n "Installing Packages... " && {
 CPU_VENDOR=$(grep -m1 'vendor_id' /proc/cpuinfo)
 IS_LAPTOP=$(cat /sys/class/dmi/id/chassis_type | grep -qE '8|9|10|11|12|14|30|31|32' && echo 1 || echo 0)
-DRIVERS="sof-firmware alsa-firmware mesa udisks2 zram-generator"
+DRIVERS="sof-firmware alsa-firmware udisks2"
 LXQT="lxqt-session lxqt-panel lxqt-runner lxqt-qtplugin lxqt-globalkeys lxqt-notificationd lxqt-config lxqt-policykit lxqt-powermanagement lxqt-themes pcmanfm-qt qterminal lximage-qt screengrab openbox xdg-desktop-portal-lxqt gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji breeze-icons gvfs xdg-utils xorg-server lightdm lightdm-gtk-greeter light-locker blueman network-manager-applet"
 UTIL="fastfetch htop pipewire-audio pipewire-pulse alsa-utils bluez bluez-utils networkmanager"
 
