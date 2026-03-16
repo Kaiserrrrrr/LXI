@@ -1,0 +1,1 @@
+cinnamon nemo gnome-terminal xed xviewer gnome-screenshot gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter
