@@ -1,0 +1,1 @@
+gnome-shell nautilus gnome-console gnome-text-editor eog gnome-screenshot gnome-control-center gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji gdm
