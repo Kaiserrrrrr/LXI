@@ -1,1 +1,1 @@
-cutefish-core cutefish-dock cutefish-launcher cutefish-statusbar cutefish-filemanager cutefish-terminal cutefish-screenshot cutefish-icons gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji sddm
+cutefish-core cutefish-dock cutefish-launcher cutefish-statusbar cutefish-filemanager cutefish-terminal cutefish-screenshot cutefish-screenlocker cutefish-icons gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji sddm
