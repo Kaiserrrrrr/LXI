@@ -3,6 +3,7 @@
 sudo -v; clear
 
 URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de"
+reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
 
 while true; do
     echo "--- Select a Desktop Environment ---"
@@ -53,4 +54,4 @@ elif echo "$PKG" | grep -q "greetingd"; then
 fi
 
 
-sync && echo "$DE installation complete... Rebooting to apply changes." && reboot 
+sync && echo -n "$DE installation complete... " && reboot_now
