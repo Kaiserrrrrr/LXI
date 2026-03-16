@@ -19,7 +19,7 @@ sudo -v; clear && echo '
 
 ' | cat
 
-URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src"
+URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/applications"
 reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
 
 if pgrep -x "lxqt-session" > /dev/null; then
