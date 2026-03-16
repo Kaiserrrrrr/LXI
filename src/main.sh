@@ -22,7 +22,7 @@ sudo -v; clear && echo '
 URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/applications"
 reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
 
-if pgrep -x "lxqt-session" > /dev/null; then
+if [[ "$XDG_SESSION_TYPE" == "x11" || "$XDG_SESSION_TYPE" == "wayland" || -n "$DISPLAY" || -n "$WAYLAND_DISPLAY" ]]; then
     curl -fsSL "$URL/install.sh" | sh && \
     curl -fsSL "$URL/clean.sh" | sh && \
     sync && echo -n "Update Complete. " && reboot_now
