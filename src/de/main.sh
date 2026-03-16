@@ -41,3 +41,13 @@ if [ -n "$PKG" ]; then
 else
     echo "Error: Could not retrieve package list for $DE."
 fi
+
+if echo "$PKG" | grep -q "gdm"; then
+    sudo systemctl enable gdm
+elif echo "$PKG" | grep -q "sddm"; then
+    sudo systemctl enable sddm
+elif echo "$PKG" | grep -q "lightdm"; then
+    sudo systemctl enable lightdm
+elif echo "$PKG" | grep -q "greetingd"; then
+    sudo systemctl enable greetingd
+fi
