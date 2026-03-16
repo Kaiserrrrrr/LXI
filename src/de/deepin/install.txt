@@ -1,1 +1,1 @@
-deepin-shell deepin-file-manager deepin-terminal deepin-editor deepin-image-viewer deepin-control-center gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-deepin-greeter
+deepin-shell deepin-file-manager deepin-terminal deepin-editor deepin-image-viewer deepin-control-center deepin-screenrecorder deepin-turbo gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-deepin-greeter
