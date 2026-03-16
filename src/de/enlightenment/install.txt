@@ -1,1 +1,1 @@
-enlightenment terminology pcmanfm ecrire ephoto gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter
+enlightenment terminology pcmanfm ecrire ephoto gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter network-manager-applet blueman
