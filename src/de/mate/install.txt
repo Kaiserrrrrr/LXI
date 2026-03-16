@@ -1,0 +1,1 @@
+mate-desktop caja mate-terminal pluma eom mate-utils mate-power-manager mate-screensaver mate-control-center gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter network-manager-applet blueman
