@@ -2,14 +2,16 @@
 
 sudo -v; clear
 
+while read -t 0.01; do :; done
+
 URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de"
-reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
+reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
 
 while true; do
     echo "--- Select a Desktop Environment ---"
-    echo "1) Budgie        2) Cinnamon      3) COSMIC       4) Cutefish"
-    echo "5) Deepin        6) Enlightenment 7) GNOME        8) KDE Plasma"
-    echo "9) LXDE         10) LXQt         11) MATE        12) Sugar"
+    echo "1) Budgie        2) Cinnamon      3) COSMIC        4) Cutefish"
+    echo "5) Deepin        6) Enlightenment 7) GNOME         8) KDE Plasma"
+    echo "9) LXDE         10) LXQt         11) MATE         12) Sugar"
     echo "13) Xfce"
     echo "-------------------------------------"
     
@@ -49,7 +51,7 @@ elif echo "$PKG" | grep -q "sddm"; then
     sudo systemctl enable sddm
 elif echo "$PKG" | grep -q "lightdm"; then
     sudo systemctl enable lightdm
-elif echo "$PKG" | grep -q "greetingd"; then
+elif echo "$PKG" | grep -q "greetd"; then
     sudo systemctl enable greetingd
 fi
 
