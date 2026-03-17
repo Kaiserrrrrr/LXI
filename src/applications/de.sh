@@ -36,7 +36,7 @@ done
 PKG=$(curl -s "$URL/$DE")
 
 if [ -n "$PKG" ]; then
-     echo -n "Installating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
+     echo -e "\n\nInstallating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
 else
     echo "Error: Could not retrieve package list for $DE."
 fi
@@ -52,4 +52,4 @@ elif echo "$PKG" | grep -q "greetd"; then
 fi
 
 
-sync && echo -n "$DE installation complete... " && reboot_now
+sync && echo -n "$DE Installation Complete... " && reboot_now
