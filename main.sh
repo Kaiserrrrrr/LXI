@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Aqtive v1.0.0
-# =============
-# LXQt on Arch made effortless
-# Project: https://github.com/kaiserrrrrr/aqtive
-
 sudo -v; clear && echo '
 
  /$$           /$$$$$$   /$$$$$$  /$$$$$$$$ /$$$$$$ /$$    /$$ /$$$$$$$$
