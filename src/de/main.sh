@@ -1,9 +1,21 @@
 #!/bin/bash
 
-sudo -v; clear
+sudo -v; clear && echo '
+
+ /$$           /$$$$$$   /$$$$$$  /$$$$$$$$ /$$$$$$ /$$    /$$ /$$$$$$$$
+|  $$         /$$__  $$ /$$__  $$|__  $$__/|_  $$_/| $$   | $$| $$_____/
+ \  $$       | $$  \ $$| $$  \ $$   | $$     | $$  | $$   | $$| $$      
+  \  $$      | $$$$$$$$| $$  | $$   | $$     | $$  |  $$ / $$/| $$$$$   
+   /$$/      | $$__  $$| $$  | $$   | $$     | $$   \  $$ $$/ | $$__/   
+  /$$/       | $$  | $$| $$/$$ $$   | $$     | $$    \  $$$/  | $$      
+ /$$/        | $$  | $$|  $$$$$$/   | $$    /$$$$$$   \  $/   | $$$$$$$$
+|__/         |__/  |__/ \____ $$$   |__/   |______/    \_/    |________/
+                             \__/                                       
+
+' | cat
 
 URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de"
-reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
+reboot_now() {  read -p "reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
 
 while true; do
     echo "--- Select a Desktop Environment ---"
