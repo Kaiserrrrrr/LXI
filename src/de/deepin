@@ -1,1 +1,1 @@
-deepin-shell deepin-file-manager deepin-terminal deepin-editor deepin-image-viewer deepin-control-center deepin-screenrecorder deepin-turbo gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-deepin-greeter
+deepin deepin-file-manager deepin-terminal deepin-control-center deepin-daemon deepin-launchpad deepin-session-shell deepin-wallpapers deepin-anything lightdm lightdm-deepin-greeter xdg-desktop-portal-dde gvfs gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji blueman network-manager-applet
