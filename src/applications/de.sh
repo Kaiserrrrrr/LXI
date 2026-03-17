@@ -47,7 +47,7 @@ while true; do
     esac
 done
 
-PKG=$(curl -s "$URL/$DE/install.txt")
+PKG=$(curl -s "$URL/$DE")
 
 if [ -n "$PKG" ]; then
     sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm
