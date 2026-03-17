@@ -1,1 +1,1 @@
-gnome-shell nautilus gnome-console gnome-text-editor eog gnome-control-center gnome-power-manager gnome-remote-desktop gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji gdm
+gnome gnome-shell gnome-session gnome-control-center gnome-terminal nautilus gnome-screenshot gdm gnome-themes-extra gnome-backgrounds xdg-desktop-portal-gnome gnome-settings-daemon mutter gvfs gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji gdm
