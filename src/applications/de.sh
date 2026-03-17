@@ -1,13 +1,16 @@
 #!/bin/bash
 
-while true; do
-    echo "--- Select a Desktop Environment ---"
-    echo "1) Budgie        2) Cinnamon      3) COSMIC        4) Cutefish"
-    echo "5) Deepin        6) Enlightenment 7) GNOME         8) KDE Plasma"
-    echo "9) LXDE         10) LXQt         11) MATE         12) Sugar"
-    echo "13) Xfce"
-    echo "-------------------------------------"
-    
+while true; do echo '
+
+------------------ Select a Desktop Environment ------------------
+1) Budgie        2) Cinnamon      3) COSMIC        4) Cutefish"
+5) Deepin        6) Enlightenment 7) GNOME         8) KDE Plasma"
+9) LXDE         10) LXQt         11) MATE         12) Sugar"
+13) Xfce
+------------------------------------------------------------------
+
+' | cat
+
     read -p "Enter selection (1-13): " CHOICE < /dev/tty
 
     case $CHOICE in
@@ -33,7 +36,7 @@ done
 PKG=$(curl -s "https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de/$DE")
 
 if [ -n "$PKG" ]; then
-     echo -e -n "\nInstallating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
+     echo -n "Installating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
 else
      echo "Error: Could not retrieve packages for $DE."
 fi
