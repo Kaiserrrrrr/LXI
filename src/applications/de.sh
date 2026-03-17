@@ -36,7 +36,7 @@ done
 PKG=$(curl -s "$URL/$DE")
 
 if [ -n "$PKG" ]; then
-    sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm
+     echo -n "Installating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
 else
     echo "Error: Could not retrieve package list for $DE."
 fi
