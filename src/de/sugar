@@ -1,1 +1,1 @@
-sugar sugar-runner sugar-fructose gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji lightdm lightdm-gtk-greeter network-manager-applet
+sugar sugar-toolkit-gtk3 sugar-artwork sugar-runner sugar-activity-terminal sugar-activity-browse sugar-activity-write sugar-activity-calculate sugar-activity-jukebox metacity lightdm lightdm-gtk-greeter gvfs gnu-free-fonts adobe-source-han-sans-otc-fonts noto-fonts-emoji blueman network-manager-applet
