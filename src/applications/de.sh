@@ -1,8 +1,5 @@
 #!/bin/bash
 
-URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de"
-reboot_now() {  read -p "reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
-
 while true; do
     echo "--- Select a Desktop Environment ---"
     echo "1) Budgie        2) Cinnamon      3) COSMIC        4) Cutefish"
@@ -33,7 +30,7 @@ while true; do
     esac
 done
 
-PKG=$(curl -s "$URL/$DE")
+PKG=$(curl -s "https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de/$DE")
 
 if [ -n "$PKG" ]; then
      echo -e "\n\nInstallating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
@@ -52,4 +49,4 @@ elif echo "$PKG" | grep -q "greetd"; then
 fi
 
 
-sync && echo -n "$DE Installation Complete... " && reboot_now
+sync && echo -n "$DE Installation Complete... " && {  read -p "reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
