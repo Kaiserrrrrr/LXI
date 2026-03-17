@@ -2,12 +2,12 @@
 
 while true; do echo '
 
-   ------------------ Select a Desktop Environment -----------------
-   1) Budgie        2) Cinnamon      3) COSMIC        4) Cutefish
-   5) Deepin        6) Enlightenment 7) GNOME         8) KDE Plasma
-   9) LXDE         10) LXQt         11) MATE         12) Sugar
-   13) Xfce
-   -----------------------------------------------------------------
+------------------ Select a Desktop Environment -----------------
+1) Budgie        2) Cinnamon      3) COSMIC        4) Cutefish
+5) Deepin        6) Enlightenment 7) GNOME         8) KDE Plasma
+9) LXDE         10) LXQt         11) MATE         12) Sugar
+13) Xfce
+-----------------------------------------------------------------
 
 ' | cat
 
