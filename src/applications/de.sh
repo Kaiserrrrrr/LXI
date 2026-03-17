@@ -33,7 +33,7 @@ done
 PKG=$(curl -s "https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de/$DE")
 
 if [ -n "$PKG" ]; then
-     echo -e "\n\nInstallating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
+     echo -e -n "\n\nInstallating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
 else
      echo "Error: Could not retrieve packages for $DE."
 fi
@@ -49,4 +49,4 @@ elif echo "$PKG" | grep -q "greetd"; then
 fi
 
 
-sync && echo -n "$DE Installation Complete... " && {  read -p "reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
+sync && echo "$DE Installation Complete... " && {  read -p "reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
