@@ -2,8 +2,6 @@
 
 sudo -v; clear
 
-while read -t 0.01; do :; done
-
 URL="https://raw.githubusercontent.com/kaiserrrrrr/aqtive/main/src/de"
 reboot_now() {  read -p "Reboot now to apply changes? [Y/n] " res < /dev/tty; case "$res" in [Yy]*) sudo reboot ;; [Nn]*) clear && return 0 ;; *) clear && return 0 ;; esac; }
 
@@ -15,7 +13,7 @@ while true; do
     echo "13) Xfce"
     echo "-------------------------------------"
     
-    read -p "Enter selection (1-13): " CHOICE
+    read -p "Enter selection (1-13): " CHOICE < /dev/tty
 
     case $CHOICE in
         1)  DE="budgie"; break ;;
