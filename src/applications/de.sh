@@ -38,7 +38,7 @@ PKG=$(curl -s "$URL/$DE")
 if [ -n "$PKG" ]; then
      echo -e "\n\nInstallating $DE... " && { sudo pacman -Syu --noconfirm && sudo pacman -S $PKG --noconfirm && sudo pacman -Scc --noconfirm } >/dev/null 2>&1
 else
-    echo "Error: Could not retrieve package list for $DE."
+     echo "Error: Could not retrieve packages for $DE."
 fi
 
 if echo "$PKG" | grep -q "gdm"; then
